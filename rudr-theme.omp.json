@@ -8,7 +8,8 @@
           "type": "owm",
           "style": "powerline",
           "powerline_symbol": "",
-          "foreground": "#ffffff",
+          "foreground": "#FFFFFF",
+          "background": "#87CEEB",
           "template": "{{ if .Error }}{{ if contains .Error \"API key\" }}🔑{{ else if contains .Error \"location\" }}📍{{ else if contains .Error \"network\" }}📡{{ else }}❓{{ end }}{{ else }}{{.Weather}} ({{.Temperature}}{{.UnitIcon}}){{ end }}",
           "properties": {
             "api_key": "4b738b5b4fea93ec488af30a1ae403a7",
@@ -19,7 +20,7 @@
           }
         },
         {
-          "foreground": "#15C2CB",
+          "foreground": "#FFB3BA",
           "properties": {
             "style": "folder"
           },
@@ -28,33 +29,33 @@
           "type": "path"
         },
         {
-          "foreground": "#F141A8",
+          "foreground": "#BAFFC9",
           "properties": {
             "branch_icon": "\ue0a0 "
           },
           "style": "plain",
-          "template": "<#F3EFF5>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
+          "template": "<#FFFFFF>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
           "type": "git"
         },
         {
-          "foreground": "#5EADF2",
+          "foreground": "#BAE1FF",
           "style": "plain",
-          "template": "{{if .Version}}<#F3EFF5>is</> \uf487 {{.Version}} {{end}}",
+          "template": "{{if .Version}}<#FFFFFF>is</> \uf487 {{.Version}} {{end}}",
           "type": "project"
         },
         {
-          "foreground": "#44FFD2",
+          "foreground": "#FFFFBA",
           "properties": {
             "fetch_version": true
           },
           "style": "plain",
-          "template": "<#F3EFF5>via</> \ue718 {{ .Full }} ",
+          "template": "<#FFFFFF>via</> \ue718 {{ .Full }} ",
           "type": "node"
         },
         {
-          "foreground": "#FE4A49",
+          "foreground": "#FFDFBA",
           "style": "plain",
-          "template": "<#F3EFF5>and</> \ue71e {{.Full}} ",
+          "template": "<#FFFFFF>and</> \ue71e {{.Full}} ",
           "type": "npm"
         }
       ],
@@ -64,15 +65,15 @@
       "alignment": "right",
       "segments": [
         {
-          "foreground": "#94ffa2",
+          "foreground": "#BAFFC9",
           "style": "plain",
-          "template": " <#ffffff>MEM:</> {{ .PhysicalPercentUsed }}% ",
+          "template": " <#FFFFFF>MEM:</> {{ .PhysicalPercentUsed }}% ",
           "type": "sysinfo"
         },
         {
           "type": "battery",
           "style": "plain",
-          "foreground": "#ffd60a",
+          "foreground": "#FFB3BA",
           "template": "{{ if not .Error }}{{ .Icon }} {{ .Percentage }}%{{ end }} ",
           "properties": {
             "discharging_icon": "🪫",
@@ -88,7 +89,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#FFE45E",
+          "foreground": "#FFDFBA",
           "style": "plain",
           "template": "\u276f ",
           "type": "text"
