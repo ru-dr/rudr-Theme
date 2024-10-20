@@ -9,7 +9,6 @@
           "style": "powerline",
           "powerline_symbol": "",
           "foreground": "#ffffff",
-          "background": "#FF0000",
           "template": "{{ if .Error }}{{ if contains .Error \"API key\" }}🔑{{ else if contains .Error \"location\" }}📍{{ else if contains .Error \"network\" }}📡{{ else }}❓{{ end }}{{ else }}{{.Weather}} ({{.Temperature}}{{.UnitIcon}}){{ end }}",
           "properties": {
             "api_key": "4b738b5b4fea93ec488af30a1ae403a7",
@@ -73,7 +72,7 @@
         {
           "type": "battery",
           "style": "plain",
-          "foreground": "#193549",
+          "foreground": "#ffd60a",
           "template": "{{ if not .Error }}{{ .Icon }} {{ .Percentage }}%{{ end }} ",
           "properties": {
             "discharging_icon": "🪫",
