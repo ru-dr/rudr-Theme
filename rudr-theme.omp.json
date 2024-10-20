@@ -10,10 +10,10 @@
           "powerline_symbol": "",
           "foreground": "#ffffff",
           "background": "#1E90FF",
-          "template": "{{ if eq .WeatherIcon \"01\" }}☀️{{ else if eq .WeatherIcon \"02\" }}⛅{{ else if eq .WeatherIcon \"03\" }}☁️{{ else if eq .WeatherIcon \"09\" }}🌧️{{ else if eq .WeatherIcon \"10\" }}🌦️{{ else if eq .WeatherIcon \"11\" }}⛈️{{ else if eq .WeatherIcon \"13\" }}❄️{{ else if eq .WeatherIcon \"50\" }}🌫️{{ end }} {{.Temperature}}{{.UnitIcon}}"
+          "template": "{{if eq .WeatherIcon \"01d\"}}☀️{{else if eq .WeatherIcon \"01n\"}}🌙{{else if eq .WeatherIcon \"02d\"}}🌤{{else if eq .WeatherIcon \"02n\"}}🌥{{else if eq .WeatherIcon \"03d\" \"03n\"}}☁️{{else if eq .WeatherIcon \"09d\" \"09n\"}}🌧{{else if eq .WeatherIcon \"10d\"}}🌦{{else if eq .WeatherIcon \"10n\"}}🌧{{else if eq .WeatherIcon \"11d\" \"11n\"}}⛈{{else if eq .WeatherIcon \"13d\" \"13n\"}}❄️{{else if eq .WeatherIcon \"50d\" \"50n\"}}🌫{{end}} {{.Temperature}}{{.UnitIcon}}",
           "properties": {
-            "api_key": "<YOUR_API_KEY>",
-            "location": "AMSTERDAM,NL",
+            "api_key": "4b738b5b4fea93ec488af30a1ae403a7",
+            "location": "MAHESANA,GUJARAT,IN",
             "units": "metric",
             "http_timeout": 20,
             "cache_timeout": 10
