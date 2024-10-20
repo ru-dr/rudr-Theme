@@ -5,13 +5,22 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "custom",
-          "style": "plain",
-          "template": "{{ .Output }}",
-          "properties": {
-            "output": "$(Get_Weather)"
-          }
-        },
+                    "type": "owm",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0b6",
+                    "foreground": "#ffffff",
+                    "background": "#389c09",
+                    "invert_powerline": true,
+                    "properties": {
+                        "apikey": "4b738b5b4fea93ec488af30a1ae403a7",
+                        "location": "MAHESANA,GUJARAT,IN",
+                        "units": "metric",
+                        "enable_hyperlink": true,
+                        "http_timeout": 400,
+                        "cache_timeout": 15,
+                        "template": "[{{.Weather}} ({{.Temperature}}{{.UnitIcon}})]({{.URL}})"
+                    }
+                },
         {
           "foreground": "#FF6B6B",
           "properties": {
