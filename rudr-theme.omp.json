@@ -6,11 +6,9 @@
       "segments": [
         {
           "type": "owm",
-          "style": "powerline",
-          "powerline_symbol": "",
+          "style": "plain",
           "foreground": "#ffffff",
-          "background": "#1E90FF",
-          "template": "{{if eq .WeatherIcon \"01d\"}}☀️{{else if eq .WeatherIcon \"01n\"}}🌙{{else if eq .WeatherIcon \"02d\"}}🌤{{else if eq .WeatherIcon \"02n\"}}🌥{{else if or (eq .WeatherIcon \"03d\") (eq .WeatherIcon \"03n\")}}☁️{{else if or (eq .WeatherIcon \"09d\") (eq .WeatherIcon \"09n\")}}🌧{{else if eq .WeatherIcon \"10d\"}}🌦{{else if eq .WeatherIcon \"10n\"}}🌧{{else if or (eq .WeatherIcon \"11d\") (eq .WeatherIcon \"11n\")}}⛈{{else if or (eq .WeatherIcon \"13d\") (eq .WeatherIcon \"13n\")}}❄️{{else if or (eq .WeatherIcon \"50d\") (eq .WeatherIcon \"50n\")}}🌫{{end}} {{.Temperature}}{{.UnitIcon}}",
+          "template": "{{ if .Error }}-{{ else }}{{if eq .WeatherIcon \"01d\"}}☀️{{else if eq .WeatherIcon \"01n\"}}🌙{{else if eq .WeatherIcon \"02d\"}}🌤{{else if eq .WeatherIcon \"02n\"}}🌥{{else if or (eq .WeatherIcon \"03d\") (eq .WeatherIcon \"03n\")}}☁️{{else if or (eq .WeatherIcon \"09d\") (eq .WeatherIcon \"09n\")}}🌧{{else if eq .WeatherIcon \"10d\"}}🌦{{else if eq .WeatherIcon \"10n\"}}🌧{{else if or (eq .WeatherIcon \"11d\") (eq .WeatherIcon \"11n\")}}⛈{{else if or (eq .WeatherIcon \"13d\") (eq .WeatherIcon \"13n\")}}❄️{{else if or (eq .WeatherIcon \"50d\") (eq .WeatherIcon \"50n\")}}🌫{{end}} {{.Temperature}}{{.UnitIcon}}{{ end }} ",
           "properties": {
             "api_key": "4b738b5b4fea93ec488af30a1ae403a7",
             "location": "MAHESANA,GUJARAT,IN",
@@ -66,22 +64,15 @@
       "segments": [
         {
           "foreground": "#94ffa2",
-          "style": "diamond",
+          "style": "plain",
           "template": " <#ffffff>MEM:</> {{ .PhysicalPercentUsed }}% ",
           "type": "sysinfo"
         },
         {
           "type": "battery",
-          "style": "powerline",
-          "powerline_symbol": "",
+          "style": "plain",
           "foreground": "#193549",
-          "background": "#ffeb3b",
-          "background_templates": [
-            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
-            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
-          ],
-          "template": " {{ if not .Error }}{{ .Icon }} {{ .Percentage }}%{{ end }} ",
+          "template": "{{ if not .Error }}{{ .Icon }} {{ .Percentage }}%{{ end }} ",
           "properties": {
             "discharging_icon": "🪫",
             "charging_icon": "⚡",
