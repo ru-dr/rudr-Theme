@@ -5,23 +5,6 @@
       "alignment": "left",
       "segments": [
         {
-                    "type": "owm",
-                    "style": "powerline",
-                    "powerline_symbol": "\ue0b6",
-                    "foreground": "#ffffff",
-                    "background": "#389c09",
-                    "invert_powerline": true,
-                    "properties": {
-                        "apikey": "4b738b5b4fea93ec488af30a1ae403a7",
-                        "location": "MAHESANA,GUJARAT,IN",
-                        "units": "metric",
-                        "enable_hyperlink": true,
-                        "http_timeout": 400,
-                        "cache_timeout": 15,
-                        "template": "[{{.Weather}} ({{.Temperature}}{{.UnitIcon}})]({{.URL}})"
-                    }
-                },
-        {
           "foreground": "#FF6B6B",
           "properties": {
             "style": "folder"
@@ -81,6 +64,22 @@
             "discharging_icon": "🪫",
             "charging_icon": "⚡",
             "charged_icon": "🔋"
+          }
+        },
+        {
+          "type": "owm",
+          "style": "plain",
+          "powerline_symbol": "\ue0b6",
+          "foreground": "#ffffff",
+          "background": "#389c09",
+          "properties": {
+            "apikey": "4b738b5b4fea93ec488af30a1ae403a7",
+            "location": "MAHESANA,GUJARAT,IN",
+            "units": "metric",
+            "enable_hyperlink": true,
+            "http_timeout": 400,
+            "cache_timeout": 15,
+            "template": "[{{.Weather}} ({{.Temperature}}{{.UnitIcon}})]({{.URL}})"
           }
         }
       ],
