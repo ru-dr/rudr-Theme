@@ -8,7 +8,7 @@
           "type": "owm",
           "style": "plain",
           "foreground": "#ffffff",
-          "template": "{{ if .Error }}-{{ else }}{{if eq .WeatherIcon \"01d\"}}☀️{{else if eq .WeatherIcon \"01n\"}}🌙{{else if eq .WeatherIcon \"02d\"}}🌤{{else if eq .WeatherIcon \"02n\"}}🌥{{else if or (eq .WeatherIcon \"03d\") (eq .WeatherIcon \"03n\")}}☁️{{else if or (eq .WeatherIcon \"09d\") (eq .WeatherIcon \"09n\")}}🌧{{else if eq .WeatherIcon \"10d\"}}🌦{{else if eq .WeatherIcon \"10n\"}}🌧{{else if or (eq .WeatherIcon \"11d\") (eq .WeatherIcon \"11n\")}}⛈{{else if or (eq .WeatherIcon \"13d\") (eq .WeatherIcon \"13n\")}}❄️{{else if or (eq .WeatherIcon \"50d\") (eq .WeatherIcon \"50n\")}}🌫{{end}} {{.Temperature}}{{.UnitIcon}}{{ end }} ",
+          "template": "{{ if .Error }}{{ if contains .Error \"API key\" }}🔑{{ else if contains .Error \"location\" }}📍{{ else if contains .Error \"network\" }}📡{{ else }}❗{{ end }}{{ else }}{{if eq .WeatherIcon \"01d\"}}☀️{{else if eq .WeatherIcon \"01n\"}}🌙{{else if eq .WeatherIcon \"02d\"}}🌤{{else if eq .WeatherIcon \"02n\"}}🌥{{else if or (eq .WeatherIcon \"03d\") (eq .WeatherIcon \"03n\")}}☁️{{else if or (eq .WeatherIcon \"09d\") (eq .WeatherIcon \"09n\")}}🌧{{else if eq .WeatherIcon \"10d\"}}🌦{{else if eq .WeatherIcon \"10n\"}}🌧{{else if or (eq .WeatherIcon \"11d\") (eq .WeatherIcon \"11n\")}}⛈{{else if or (eq .WeatherIcon \"13d\") (eq .WeatherIcon \"13n\")}}❄️{{else if or (eq .WeatherIcon \"50d\") (eq .WeatherIcon \"50n\")}}🌫{{end}} {{.Temperature}}{{.UnitIcon}}{{ end }} ",
           "properties": {
             "api_key": "4b738b5b4fea93ec488af30a1ae403a7",
             "location": "MAHESANA,GUJARAT,IN",
