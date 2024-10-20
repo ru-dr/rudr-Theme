@@ -5,18 +5,11 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "owm",
-          "style": "powerline",
-          "powerline_symbol": "",
-          "foreground": "#FFFFFF",
-          "background": "#4B0082",
-          "template": "{{ if .Error }}{{ if contains .Error \"API key\" }}🔑{{ else if contains .Error \"location\" }}📍{{ else if contains .Error \"network\" }}📡{{ else }}❓{{ end }}{{ else }}{{.Weather}} ({{.Temperature}}{{.UnitIcon}}){{ end }}",
+          "type": "custom",
+          "style": "plain",
+          "template": "{{ .Output }}",
           "properties": {
-            "api_key": "4b738b5b4fea93ec488af30a1ae403a7",
-            "location": "MAHESANA,GUJARAT,IN",
-            "units": "metric",
-            "http_timeout": 20,
-            "cache_timeout": 10
+            "output": "$(Get_Weather)"
           }
         },
         {
